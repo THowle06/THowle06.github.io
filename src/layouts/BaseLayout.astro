@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Tyler - Backend Development, Software Engineering & Distributed Systems",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body
+    class="min-h-screen relative selection:bg-zinc-200 selection:text-zinc-900 bg-zinc-950 text-zinc-100"
+  >
+    <!-- Subtle top ambient light glow -->
+    <div class="fixed inset-0 -z-10 pointer-events-none flex justify-center">
+      <div
+        class="w-[650px] h-[350px] bg-zinc-800/25 blur-[140px] rounded-full -mt-20"
+      >
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-6 py-16 sm:py-24">
+      <slot />
+    </div>
+  </body>
+</html>

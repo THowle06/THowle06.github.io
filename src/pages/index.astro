@@ -1,23 +1,36 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import SkillsBlock from "../components/SkillsBlock.astro";
+import AcademicGrid from "../components/AcademicGrid.astro";
+import { projects } from "../data/portfolio";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
-    <title>Tyler - Software Engineer</title>
-  </head>
-  <body class="min-h-screen flex items-center justify-center">
-    <div class="text-center space-y-3">
-      <h1 class="text-3xl font-bold tracking-tight text-white">Tyler</h1>
-      <p class="text-zinc-400 font-mono text-sm">
-        Backend & Systems-Focused Software Engineer
-      </p>
-      <p class="text-xs text-emerald-400 font-mono">
-        Setup initialised successfully.
-      </p>
-    </div>
-  </body>
-</html>
+<BaseLayout title="Tyler - Software Engineer & Backend Developer">
+  <main class="space-y-16">
+    <Hero />
+
+    <section class="space-y-4">
+      <h2
+        class="text-xs uppercase tracking-wider text-zinc-400 font-mono font-medium"
+      >
+        Engineered Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {projects.map((proj) => <ProjectCard project={proj} />)}
+      </div>
+    </section>
+
+    <SkillsBlock />
+
+    <AcademicGrid />
+
+    <footer
+      class="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-500 font-mono"
+    >
+      <span>Tyler Howle· University of Nottingham</span>
+      <span>Built with Astro & Tailwind</span>
+    </footer>
+  </main>
+</BaseLayout>

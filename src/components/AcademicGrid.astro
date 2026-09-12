@@ -1,0 +1,29 @@
+---
+import { academicHighlights } from "../data/portfolio";
+---
+
+<section class="space-y-4">
+  <div class="flex items-center justify-between">
+    <h2
+      class="text-xs uppercase tracking-wider text-zinc-400 font-mono font-medium"
+    >
+      Academic Performance
+    </h2>
+    <span class="text-xs font-mono text-emerald-400"
+      >First-Class Honours Track</span
+    >
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+    {
+      academicHighlights.map((mod) => (
+        <div class="flex items-center justify-between px-3.5 py-2.5 rounded-lg border border-zinc-800/80 bg-zinc-900/30 text-xs">
+          <span class="text-zinc-300 truncate mr-2">{mod.name}</span>
+          <span class="font-mono text-zinc-100 font-semibold">
+            {mod.grade}%
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</section>
