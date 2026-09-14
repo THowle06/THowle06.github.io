@@ -13,6 +13,18 @@ export interface AcademicModule {
   grade: number;
 }
 
+export interface WorkExperience {
+  role: string;
+  company: string;
+  period: string;
+  points: string[];
+}
+
+export interface LeadershipItem {
+  title: string;
+  description: string;
+}
+
 export const personalInfo = {
   name: "Tyler Howle",
   role: "Backend & Systems-Focused Software Engineer",
@@ -31,8 +43,10 @@ export const skills = {
     "TypeScript",
     "JavaScript",
     "Python",
-    "Java",
+    "C#",
     "C/C++",
+    "Rust",
+    "Java",
     "Haskell",
     "SQL",
     "ARM Assembly",
@@ -41,6 +55,7 @@ export const skills = {
     "Node.js",
     "Express",
     "FastAPI",
+    "ASP.NET Core",
     "PosthreSQL",
     "Prisma",
     "Redis",
@@ -118,4 +133,45 @@ export const academicHighlights: AcademicModule[] = [
   { name: "C++ Programming", grade: 72 },
   { name: "Introduction to Formal Reasoning", grade: 72 },
   { name: "Languages and Computation", grade: 71 },
+];
+
+export const workExperience: WorkExperience[] = [
+  {
+    role: "Technology & Engineering Intern",
+    company: "Bright Network IEUK",
+    period: "2025",
+    points: [
+      "Analysed large-scale server logs to detect bot traffic patterns and diagnose system bottlenecks.",
+      "Formulated architectural enhancements utilising Docker and load balancing concepts to improve reliability.",
+      "Authored a technical findings report detailing system anomalies and performance mitigation strategies.",
+    ],
+  },
+  {
+    role: "IT Support Technician (Placement)",
+    company: "Brighter Futures LPT @ Doncaster UTC",
+    period: "2023",
+    points: [
+      "Diagnised and resolved hardware, software, and active networking faults across school infrastructure.",
+      "Upgrades and configures ~30 macOS devices for enterprise educational use.",
+      "Handled user account permissions, printing subsystems, and local network diagnostics.",
+    ],
+  },
+];
+
+export const leadership: LeadershipItem[] = [
+  {
+    title: "Post-16 Head Boy",
+    description:
+      "Elected to lead student initiatives and represent the educational institution externally.",
+  },
+  {
+    title: "Charity Fundraiser Lead",
+    description:
+      "Organised and executed a community fundraising campaign raising over £200.",
+  },
+  {
+    title: "Post-16 Achievement & Contribution Awards",
+    description:
+      "Recipient of 'Significant Contribution to Post-16 2024' and multiple academic achievement awards.",
+  },
 ];
