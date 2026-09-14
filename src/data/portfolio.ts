@@ -18,7 +18,7 @@ export const personalInfo = {
   role: "Backend & Systems-Focused Software Engineer",
   education: "BSc Computer Science · University of Nottingham",
   bio: "Focused on building maintainable backend software, scalable API design, and distributed systems. Grounded in strong fundamentals across computer architecture, databases, and formal reasoning.",
-  status: "Open to Software Engineering & Backend ROles",
+  status: "Open to Software Engineering & Backend Roles",
   links: {
     github: "https://github.com/thowle06",
     linkedin: "https://www.linkedin.com/in/t-howle06/",
