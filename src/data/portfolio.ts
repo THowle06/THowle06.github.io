@@ -14,11 +14,11 @@ export interface AcademicModule {
 }
 
 export const personalInfo = {
-  name: "Tyler",
+  name: "Tyler Howle",
   role: "Backend & Systems-Focused Software Engineer",
-  education: "BSc Computer Science (Year 3) · University of Nottingham",
+  education: "BSc Computer Science · University of Nottingham",
   bio: "Focused on building maintainable backend software, scalable API design, and distributed systems. Grounded in strong fundamentals across computer architecture, databases, and formal reasoning.",
-  status: "Open to Software Engineering & Backend Internships",
+  status: "Open to Software Engineering & Backend ROles",
   links: {
     github: "https://github.com/thowle06",
     linkedin: "https://www.linkedin.com/in/t-howle06/",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
   },
   {
     title: "RobotDay Management System",
-    role: "Backend & Git Workflow Lead",
+    role: "Backend Developer & Git Workflow Lead",
     description:
       "Agile group event management platform delivering reliable service layers and clean interfaces.",
     highlights: [
@@ -112,8 +112,10 @@ export const academicHighlights: AcademicModule[] = [
   { name: "Computer Architecture", grade: 83 },
   { name: "Developing Maintainable Software", grade: 81 },
   { name: "Programming & Algorithms", grade: 77 },
+  { name: "Software Engineering Group Project", grade: 76 },
   { name: "Programming Paradigms", grade: 76 },
   { name: "Databases & Interfaces", grade: 75 },
+  { name: "C++ Programming", grade: 72 },
   { name: "Introduction to Formal Reasoning", grade: 72 },
-  { name: "Introduction to Software Engineering", grade: 72 },
+  { name: "Languages and Computation", grade: 71 },
 ];
