@@ -1,0 +1,58 @@
+---
+import { workExperience, leadership } from "../data/portfolio";
+---
+
+<section class="space-y-8">
+  <!-- Work Experience -->
+  <div class="space-y-4">
+    <h2
+      class="text-xs uppercase tracking-wider text-zinc-400 font-mono font-medium"
+    >
+      Experience
+    </h2>
+    <div class="space-y-6">
+      {
+        workExperience.map((job) => (
+          <div class="p-5 rounded-2xl border border-zinc-800/80 bg-zinc-900/30 space-y-2">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h3 class="text-sm font-semibold text-zinc-100">
+                {job.role} ·{" "}
+                <span class="text-zinc-400 font-normal">{job.company}</span>
+              </h3>
+              <span class="text-xs font-mono text-zinc-500">{job.period}</span>
+            </div>
+            <ul class="space-y-1.5 pt-1">
+              {job.points.map((pt) => (
+                <li class="text-xs text-zinc-400 flex items-start gap-2">
+                  <span class="text-zinc-600 font-bold">•</span>
+                  <span>{pt}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Leadership & Recognition -->
+  <div class="space-y-4">
+    <h2
+      class="text-xs uppercase tracking-wider text-zinc-400 font-mono font-medium"
+    >
+      Leadership & Recognition
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gao-3">
+      {
+        leadership.map((item) => (
+          <div class="p-4 rounded-xl border border-zinc-800/70 bg-zinc-900/20 space-y-1">
+            <p class="text-xs font-medium text-zinc-200">{item.title}</p>
+            <p class="text-[11px] text-zinc-400 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
